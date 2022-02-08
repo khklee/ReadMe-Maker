@@ -1,12 +1,13 @@
 // TODO: Include packages needed for this application
 const fs = require('fs');
 const inquirer = require('inquirer');
+const generateReadme = require('./src/readme-template');
 
 // TODO: Create an array of questions for user input
-const questions = (fileName) => {
+const questions = (data) => {
     // If there's no 'filename' array property, create one
-    if (!fileName) {
-        fileName = [];
+    if (!data) {
+        data = [];
     }
     console.log(`
     =================
@@ -27,17 +28,7 @@ const questions = (fileName) => {
                     return false;
                 }
             }
-        }
-    ]);
-};
-
-const detailQuestions = (data) => {
-    // If there's no 'data' array property, create one
-    if (!data) {
-        data = [];
-    }
-
-   return inquirer.prompt([
+        },
         {
             type: 'input', 
             name: 'description',
@@ -107,30 +98,16 @@ const detailQuestions = (data) => {
     ])
 }
 
-// TODO: Create a function to write README file
-function writeToFile(fileName, data) {
-    return new Promise((resolve, reject) => {
-        fs.writeFile('./dist/README.md', fileName, data, err => {
-            if (err) {
-                reject(err);
-                return;
-            }
-            resolve({
-                ok: true,
-                message: 'README created!'
-            });
-        })
-    })
-};
-
 // TODO: Create a function to initialize app
 function init() {
     questions()
-        .then(detailQuestions)
-        .then(fileName, data => {
-            console.log(fileName, data);
-            return writeToFile(fileName, data);
-        });
+        .then(data => {
+            const pageHTML = generateReadme(data)
+            fs.writeFile('./index.html', pageHTML, err => {
+                if (err) throw err;
+                console.log('README complete!')
+            })
+        })
 };
 
 // Function call to initialize app

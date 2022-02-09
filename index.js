@@ -1,7 +1,7 @@
 // TODO: Include packages needed for this application
 const fs = require('fs');
 const inquirer = require('inquirer');
-const generateReadme = require('./src/readme-template');
+const generateReadme = require('./utils/generateMarkdown');
 
 // TODO: Create an array of questions for user input
 const questions = (data) => {
@@ -63,10 +63,10 @@ const questions = (data) => {
             message: 'Go the extra mile and write tests for your application. Then provide examples on how to run them here.'
         }, 
         {
-            type: 'checkbox',
+            type: 'list',
             name: 'license', 
-            message: 'Choose an open source license. (Check all that apply)',
-            choices: ['Apache License 2.0', 'GNU GPLv3', 'GNU GPLv2', 'MIT', 'ISC License']
+            message: 'Choose an open source license.',
+            choices: ['Apache_2.0', 'GPLv3', 'GPL_v2', 'MIT', 'ISC']
         },
         {
             type: 'input',

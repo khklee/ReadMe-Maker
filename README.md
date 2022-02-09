@@ -1,5 +1,7 @@
 
-</span>
+
+    <img src="https://img.shields.io/badge/License-Apache_2.0-blue.svg">
+    </span>
 <h1># 1</h1> 
 <h2>## Description</h2>
     <p>2</p>
@@ -21,8 +23,10 @@
 <h2 id="test">## Test</h2>
     <p>6</p>
 <h2 id="license">## License</h2>
-    <p></p>
+    <p>
+      This application is covered under Apache_2.0 and please <a href="https://choosealicense.com/licenses/">click here</a> to find out more details.
+    </p>
 <h2 id="questions">## Questions</h2>
-    <p><a href="https://github.com/7">Github</a></p>
-    <p>If you have additional questions, please <a href="8">"Reach Me".</a><p>            
+    <p><a href="https://github.com/6">Github</a></p>
+    <p>If you have additional questions, please <a href="6">"Reach Me".</a><p>            
   

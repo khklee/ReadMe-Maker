@@ -63,7 +63,7 @@ const questions = (data) => {
             message: 'Go the extra mile and write tests for your application. Then provide examples on how to run them here.'
         }, 
         {
-            type: 'list',
+            type: 'checkbox',
             name: 'license', 
             message: 'Choose an open source license.',
             choices: ['Apache_2.0', 'GPLv3', 'GPL_v2', 'MIT', 'ISC']

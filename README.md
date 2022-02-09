@@ -28,5 +28,5 @@
     </p>
 <h2 id="questions">## Questions</h2>
     <p><a href="https://github.com/khklee">Github</a></p>
-    <p>If you have additional questions, please <a href="amorfati38@gmail.com">"Reach Me".</a><p>            
+    <p>If you have additional questions, please <a href="mailto: amorfati38@gmail.com">"Reach Me".</a><p>            
   

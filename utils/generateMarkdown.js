@@ -50,7 +50,7 @@ function generateMarkdown(data) {
     <p>${renderLicenseLink(data.license)}</p>
 <h2 id="questions">## Questions</h2>
     <p><a href="https://github.com/${data.github}">Github</a></p>
-    <p>If you have additional questions, please <a href="${data.email}">"Reach Me".</a><p>            
+    <p>If you have additional questions, please <a href="mailto: ${data.email}">"Reach Me".</a><p>            
   `;
 }
 

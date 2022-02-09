@@ -102,8 +102,8 @@ const questions = (data) => {
 function init() {
     questions()
         .then(data => {
-            const pageHTML = generateReadme(data)
-            fs.writeFile('./index.html', pageHTML, err => {
+            const pageReadme = generateReadme(data)
+            fs.writeFile('./README.md', pageReadme, err => {
                 if (err) throw err;
                 console.log('README complete!')
             })
